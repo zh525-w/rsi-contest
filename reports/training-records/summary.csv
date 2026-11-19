@@ -1,0 +1,25 @@
+﻿id,kind,dataset,round,track,metric_name,metric_value,decision,config,parent_sha256,artifact_sha256,source,created_at
+artifact-A-boost,artifact,A,1,boost,macro_f1,0.7392536961478594,,"{""feature"": {""mode"": ""log""}, ""members"": 5, ""pca"": 0, ""strategy"": null}",sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757,sha256:7ef42e0379e508cfa58bdafbed2c47d44097bf5ed167a75ad2a45d569c3a6be3,solution/models/A/training.json,
+artifact-A-strict,artifact,A,,strict,macro_f1,0.7268296482589388,,"{""best_epoch"": 14, ""epochs"": 200, ""learning_rate"": 0.00105}",sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757,sha256:93ed550a5e6ef9cc1ab069f31274c05fa081a8b38fd5767124949240e866bf68,solution/models_strict/A/training.json,
+decision-A-r1-1,decision,A,1,boost,macro_f1,0.7141,keep,{},,,reports/experiments.jsonl,
+decision-A-r2-2,decision,A,2,boost,macro_f1,0.7309,keep,{},,,reports/experiments.jsonl,
+decision-A-r3-3,decision,A,3,boost,macro_f1,0.7499,keep,{},,,reports/experiments.jsonl,
+decision-A-r4-4,decision,A,4,boost,macro_f1,0.619,revert,{},,,reports/experiments.jsonl,
+decision-A-r5-5,decision,A,5,boost,macro_f1,0.5323,revert,{},,,reports/experiments.jsonl,
+decision-A-r6-6,decision,A,6,boost,macro_f1,0.7393,keep,{},,,reports/experiments.jsonl,
+run-A-r1-boost,training_run,A,1,boost,macro_f1,0.7392536961478594,,"{""feature"": {""mode"": ""log""}, ""members"": 5, ""pca"": 0}",sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757,sha256:7ef42e0379e508cfa58bdafbed2c47d44097bf5ed167a75ad2a45d569c3a6be3,reports/experiments_cloud.jsonl,2026-11-19T12:09:21Z
+artifact-B-boost,artifact,B,1,boost,rmse,326.02152863028647,,"{""feature"": {""mode"": ""log"", ""squares"": true}, ""members"": 5, ""pca"": 0, ""strategy"": null}",sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4,sha256:864db2e542a36118bd993ec8ac9bc6e87b7a43863d728a82296e24420cf667e1,solution/models/B/training.json,
+artifact-B-strict,artifact,B,,strict,rmse,653.1033319733872,,"{""best_epoch"": 8, ""epochs"": 100, ""learning_rate"": 0.0009}",sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4,sha256:458b34a183b3a6254685c27d6595c82d34c92f441380459a3242ae24162453af,solution/models_strict/B/training.json,
+decision-B-r1-7,decision,B,1,boost,rmse,653.1,keep_as_control,{},,,reports/experiments.jsonl,
+decision-B-r2-8,decision,B,2,boost,rmse,480.1,keep,{},,,reports/experiments.jsonl,
+decision-B-r3-9,decision,B,3,boost,rmse,326.02,keep,{},,,reports/experiments.jsonl,
+decision-B-r4-10,decision,B,4,boost,rmse,459.1,revert,{},,,reports/experiments.jsonl,
+decision-B-r5-11,decision,B,5,boost,rmse,637.4,revert,{},,,reports/experiments.jsonl,
+run-B-r1-boost,training_run,B,1,boost,rmse,326.02152863028647,,"{""feature"": {""mode"": ""log"", ""squares"": true}, ""members"": 5, ""pca"": 0}",sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4,sha256:864db2e542a36118bd993ec8ac9bc6e87b7a43863d728a82296e24420cf667e1,reports/experiments_cloud.jsonl,2026-11-19T12:10:04Z
+artifact-C-boost,artifact,C,1,boost,rmse,49.07041011658132,,"{""feature"": {""mode"": ""raw""}, ""members"": 2, ""pca"": 8, ""strategy"": null}",sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e,sha256:961e35cd16c47ad92777e0b058ddb22838cd21f537f6511046a12ad47a490f90,solution/models/C/training.json,
+artifact-C-strict,artifact,C,,strict,rmse,51.30947245580156,,"{""best_epoch"": 51, ""epochs"": 60, ""learning_rate"": 0.0007}",sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e,sha256:4b602f36e62cab3fb63f2388867cd1876d7ee844f672a149fdf90f3714bff7d9,solution/models_strict/C/training.json,
+decision-C-r1-12,decision,C,1,boost,rmse,49.95,keep,{},,,reports/experiments.jsonl,
+decision-C-r2-13,decision,C,2,boost,rmse,48.8,keep,{},,,reports/experiments.jsonl,
+decision-C-r3-14,decision,C,3,boost,rmse,49.07,keep,{},,,reports/experiments.jsonl,
+decision-C-r4-15,decision,C,4,boost,rmse,51.31,keep_as_control,{},,,reports/experiments.jsonl,
+run-C-r1-boost,training_run,C,1,boost,rmse,49.07041011658132,,"{""feature"": {""mode"": ""raw""}, ""members"": 2, ""pca"": 8}",sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e,sha256:961e35cd16c47ad92777e0b058ddb22838cd21f537f6511046a12ad47a490f90,reports/experiments_cloud.jsonl,2026-11-19T12:13:30Z

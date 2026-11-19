@@ -1,0 +1,60 @@
+{
+  "contest": "智训引擎 / RSI Challenge（工业模型自进化）",
+  "purpose": "提交表与 harness 的模型身份、实验记录配置模板；不含任何密钥",
+  "submission_model_identity": {
+    "type": "persistent_sampler_or_whitelisted_base",
+    "pytrio_sampler_path": "trio://<workspace>/<model>/<checkpoint>",
+    "base_model_whitelist": "Qwen/Qwen3.8-27B",
+    "parameter_limit": "≤ 27B（Qwen3.8-27B 满足）",
+    "api_key_location": "仅平台密钥栏；不写入镜像、源码、文档或训练记录",
+    "notes": [
+      "镜像内 harness 通过 rnd.model(...) / rnd.transport() 走平台 host gateway，不需要在镜像内配置 PyTRiO 端点或密钥",
+      "提交时在平台表单填写完整 trio:// 路径，或选择白名单基础模型并完成二次确认"
+    ]
+  },
+  "harness_model_calls": {
+    "gateway": "rnd.model(messages, max_tokens<=rnd.max_output_tokens, temperature=0)",
+    "decision_protocol": "{\"select\":\"candidate|parent\",\"reason\":\"...\"}",
+    "fallback": "解析失败或候选劣于父模型时按指标护栏回滚到父检查点"
+  },
+  "experiment_recording": {
+    "platform": "SwanLab",
+    "project": "<SWANLAB_PROJECT>",
+    "workspace": "<SWANLAB_WORKSPACE>",
+    "env": [
+      "SWANLAB_API_KEY",
+      "SWANLAB_PROJECT",
+      "SWANLAB_WORKSPACE",
+      "SWANLAB_MODE"
+    ],
+    "mode_default": "local（评测环境离线，默认不联网）",
+    "upload_command": "python solution/upload_experiments.py",
+    "local_fallback": "reports/experiments.jsonl 与 reports/experiments_cloud.jsonl"
+  },
+  "logging_policy": {
+    "per_round_fields": [
+      "dataset",
+      "round_index",
+      "validation",
+      "members",
+      "feature",
+      "pca",
+      "parent_sha256",
+      "artifact_sha256",
+      "training_seconds"
+    ],
+    "secrets_never_logged": true
+  },
+  "verified": {
+    "date": "2026-11-19",
+    "method": "PyTRIO ServiceClient.get_supported_models() + 单次 sample（temperature=0）",
+    "supported_models": [
+      "Qwen/Qwen3.5-4B",
+      "Qwen/Qwen3.8-27B"
+    ],
+    "context_length": 65536,
+    "sampling": "Qwen3.8-27B 可用；策略/保留决策提示词在思考模式下 80–130 输出 token 后给出可解析 JSON",
+    "prompt_contract": "提示词不包含字面 JSON 示例；只解析完整的 JSON 对象，解析失败时回落到已验证默认配方/父模型",
+    "tokens_spent": "< 1500（仅连通性与提示词格式验证，未做训练）"
+  }
+}

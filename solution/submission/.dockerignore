@@ -1,0 +1,8 @@
+﻿runs/
+logs/
+results/
+*.tar
+*.zip
+__pycache__/
+*.pyc
+.venv/

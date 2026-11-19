@@ -1,0 +1,34 @@
+{
+  "platform": "SwanLab",
+  "host": "https://swanlab.cn",
+  "workspace": "slience917",
+  "project": "industrial-contest",
+  "project_url": "https://swanlab.cn/@slience917/industrial-contest",
+  "uploaded_at": "2026-11-19T13:08:14Z",
+  "runs": {
+    "A": {
+      "url": "https://swanlab.cn/@slience917/industrial-contest/runs/lv4la8tw",
+      "name": "A-experiments",
+      "records": 9
+    },
+    "B": {
+      "url": "https://swanlab.cn/@slience917/industrial-contest/runs/7ace77dc",
+      "name": "B-experiments",
+      "records": 8
+    },
+    "C": {
+      "url": "https://swanlab.cn/@slience917/industrial-contest/runs/4ivaa95n",
+      "name": "C-experiments",
+      "records": 7
+    }
+  },
+  "logged_fields": [
+    "val/macro_f1",
+    "val/accuracy",
+    "val/rmse",
+    "val/mae",
+    "round"
+  ],
+  "source": "reports/training-records/records.jsonl",
+  "note": "每个数据集一个 run，24 条记录按 step 打点；记录内容与本地 records.jsonl 一致。"
+}

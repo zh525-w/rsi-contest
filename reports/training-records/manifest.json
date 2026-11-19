@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-11-19T12:55:54Z",
+  "records": 24,
+  "files": [
+    {
+      "path": "appendix.md",
+      "bytes": 10549,
+      "sha256": "sha256:7c685ff54d4c2c4d695d040ca5fedbf072b7e08520feeb9e559e5cf59391e40f"
+    },
+    {
+      "path": "records.jsonl",
+      "bytes": 12879,
+      "sha256": "sha256:f5965e360c5aa160dc6a065f1da78b68318f88d81c30551c70fb4540f404b012"
+    },
+    {
+      "path": "summary.csv",
+      "bytes": 4383,
+      "sha256": "sha256:598ede1ee56f29f24e827786542a674ba21ff4f155206c715bafc17f3cba60f5"
+    },
+    {
+      "path": "summary.md",
+      "bytes": 2320,
+      "sha256": "sha256:5f6167f6f8ce618dbb3704714becd57d3c2a0773209170b1e0dfee6b96d28595"
+    }
+  ]
+}
